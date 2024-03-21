@@ -1,0 +1,173 @@
+@import '../../assets/scss/main.scss';
+
+%position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin clicked-bar {
+  background-color: transparent;
+
+  &::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
+
+/* page styling */
+.button_div {
+  position: relative;
+
+  @include d-flex(normal, center);
+
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+/* styling hamb bar */
+
+.bar,
+.bar::before,
+.bar::after {
+  width: 1.3rem;
+  height: 1.3px;
+  background-color: $primary-color;
+  display: inline-block;
+}
+
+.burger-menu {
+  position: relative;
+  background-color: $nav-color !important;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0.3rem 3rem $secondary-color;
+  text-align: center;
+  cursor: pointer;
+
+  .bar {
+    @extend %position-center;
+
+    &:nth-child(odd) {
+      border-radius: 0.5em;
+      background-color: transparent;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.7s ease-in-out;
+    }
+
+    &::before {
+      top: -0.22rem;
+    }
+
+    &::after {
+      top: 0.27rem;
+    }
+  }
+
+  &.clicked .bar {
+    @include clicked-bar;
+  }
+}
+
+.background {
+  @extend %position-center;
+
+  height: 75%;
+  width: 75%;
+  border-radius: 50%;
+  z-index: 7;
+  background-color: $menu-bacg;
+  transition: all 0.5s ease-in-out 1s;
+
+  /* functionality */
+  &.clicked {
+    transition: transform 0.7s cubic-bezier(0.3, 0, 0.1, 0.3) 0.5s;
+    background-color: $menu-bacg;
+    transform: scale(30);
+  }
+}
+
+@include media(480px) {
+  .button_div {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .burger-menu {
+    /* styling hamb bar */
+
+    .bar,
+    .bar::before,
+    .bar::after {
+      width: 1.7rem;
+      height: 1.5px;
+    }
+
+    .bar {
+      &::before {
+        top: -0.3rem;
+      }
+
+      &::after {
+        top: 0.25rem;
+      }
+    }
+
+    &.clicked .bar {
+      @include clicked-bar;
+    }
+  }
+}
+
+@include media(992px) {
+  .button_div {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .bar,
+  .bar::before,
+  .bar::after {
+    width: 2rem;
+  }
+
+  .bar {
+    &::before {
+      top: -0.35rem;
+    }
+
+    &::after {
+      top: 0.33rem;
+    }
+  }
+
+  .burger-menu {
+    &:hover {
+      .bar::before {
+        top: -0.42rem;
+      }
+
+      .bar::after {
+        top: 0.4rem;
+      }
+    }
+
+    &.clicked .bar {
+      @include clicked-bar;
+    }
+  }
+}

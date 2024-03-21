@@ -1,0 +1,542 @@
+@import '../../assets/scss/variable';
+@import '../../assets/scss/mixins';
+
+.home_page {
+  margin: 100%;
+  height: 100%;
+}
+
+.about_page {
+  padding-top: 12rem;
+}
+
+.mission {
+  position: relative;
+  width: 469px;
+  border: 1px solid #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 13px 0 13px 13px;
+  font-size: 2rem;
+  color: white;
+  margin-left: 10%;
+  padding: 2rem 1rem 4rem 1rem;
+  z-index: 1;
+  background: #131313;
+
+  .title {
+    position: absolute;
+    padding: 1rem 2rem;
+    left: 420px;
+    top: -44px;
+    background: #131313;
+    border: 1px solid #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    font-size: 22px;
+  }
+}
+
+.background_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20rem;
+
+  img {
+    filter: brightness(60%);
+  }
+}
+
+.rightAlign {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  margin-top: -24rem;
+}
+
+.vision {
+  position: relative;
+  width: 469px;
+  font-size: 2rem;
+  color: white;
+  margin-right: 10%;
+  padding: 2rem 1rem 4rem 1rem;
+  background: #2719c5;
+  box-shadow: -13px 14px 25px rgba(0, 0, 0, 0.9);
+  border-radius: 13px;
+
+  .title {
+    position: absolute;
+    padding: 1rem 2rem;
+    right: 420px;
+    top: -44px;
+    font-size: 22px;
+    background: #2719c5;
+    box-shadow: -13px 14px 25px rgba(0, 0, 0, 0.9);
+    border-radius: 13px;
+  }
+}
+
+.service {
+  position: relative;
+  width: 100%;
+  // padding-left: 10%;
+  margin-top: 10rem;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  transform: translate(0, -20rem);
+
+  .multImage {
+    width: 100%;
+    z-index: 1;
+    display: flex;
+
+    img {
+      margin-top: 6rem;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      filter: brightness(50%);
+    }
+  }
+}
+
+.circleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13rem;
+
+  .circle {
+    position: relative;
+    width: 34rem;
+    height: 34rem;
+    border-radius: 50%;
+    border: 1px solid $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem;
+
+    p {
+      color: $white;
+      font-size: 2rem;
+    }
+
+    .sur1 {
+      position: absolute;
+      top: -1rem;
+      background-color: $white;
+      border-radius: 20px;
+
+      p {
+        color: black;
+        font-size: 17px;
+        padding: 1rem 2rem;
+      }
+    }
+
+    .sur2 {
+      position: absolute;
+      left: -3rem;
+      background-color: $white;
+      border-radius: 20px;
+      margin-top: 13rem;
+
+      p {
+        color: black;
+        font-size: 17px;
+        padding: 1rem 2rem;
+      }
+    }
+
+    .sur3 {
+      position: absolute;
+      right: -3rem;
+      background-color: $white;
+      border-radius: 20px;
+      margin-top: 13rem;
+
+      p {
+        color: black;
+        font-size: 17px;
+        padding: 1rem 2rem;
+      }
+    }
+
+    .sur4,
+    .sur5,
+    .sur6 {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 40%;
+      }
+    }
+
+    .sur4 {
+      position: absolute;
+      top: 8rem;
+      right: 0.5rem;
+      background-color: $white;
+      border-radius: 50%;
+      height: 3rem;
+      width: 3rem;
+
+      img {
+        width: 40%;
+        transform: rotateZ(110deg);
+      }
+    }
+
+    .sur5 {
+      position: absolute;
+      top: 8rem;
+      left: 0.5rem;
+      background-color: $white;
+      border-radius: 50%;
+      height: 3rem;
+      width: 3rem;
+    }
+
+    .sur6 {
+      position: absolute;
+      bottom: -1.5rem;
+      background-color: $white;
+      border-radius: 50%;
+      height: 3rem;
+      width: 3rem;
+
+      img {
+        width: 40%;
+        transform: rotateZ(-120deg);
+      }
+    }
+  }
+}
+
+.teamContent {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 13rem;
+
+  .title {
+    width: 40%;
+    font-size: 2rem;
+    color: $white;
+    text-align: right;
+  }
+
+  .team {
+    width: 50%;
+    overflow: hidden;
+    background: #1a1b23;
+    box-shadow: -23px 21px 22px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    padding: 2rem;
+
+    .discription {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+
+      img {
+        width: 4rem;
+        height: 4rem;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .text {
+        h3 {
+          font-size: 1.5rem;
+          color: $white;
+        }
+
+        p {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.journey {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12rem;
+
+  .title {
+    font-size: 2rem;
+    color: $white;
+    width: 40%;
+    text-align: center;
+  }
+
+  .scale {
+    position: relative;
+    width: 70%;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    border-left: 2px dashed $white;
+    padding: 5rem 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      left: -9px;
+      border-radius: 50%;
+      width: 1rem;
+      height: 1rem;
+      background-color: $white;
+    }
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: -1rem;
+    //   left: -9px;
+    //   border-radius: 50%;
+    //   width: 1rem;
+    //   height: 1rem;
+    //   background-color: $white;
+    // }
+
+    .item {
+      position: relative;
+      display: flex;
+      padding: 4rem 2rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -19px;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: $white;
+      }
+
+      .Year {
+        position: absolute;
+        top: 0;
+
+        h5 {
+          font-size: 25px;
+          color: $white;
+        }
+      }
+
+      .discription {
+        width: 50%;
+        padding: 0 2rem 0 0;
+
+        p {
+          color: $white;
+        }
+      }
+
+      img {
+        width: 50%;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .teamContent {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .journey {
+    .scale {
+      .item {
+        flex-wrap: wrap;
+
+        .discription {
+          padding: 0;
+          width: 100%;
+
+          p {
+            text-align: left;
+          }
+        }
+
+        img {
+          width: 100%;
+          order: -1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .teamContent {
+    flex-wrap: wrap;
+    padding: 0 7%;
+
+    .title {
+      width: 100%;
+      text-align: center;
+    }
+
+    .team {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 644px) {
+  .mission {
+    width: 200px;
+    padding: 2rem 1rem 2rem 1rem;
+    font-size: 12px;
+
+    .title {
+      left: 10rem;
+      font-size: 12px;
+      padding: 1rem;
+    }
+  }
+
+  .vision {
+    width: 200px;
+    padding: 2rem 1rem 2rem 1rem;
+    font-size: 12px;
+    top: 4rem;
+
+    .title {
+      right: 10rem;
+      font-size: 12px;
+      padding: 1rem;
+    }
+  }
+
+  .circleContainer {
+    .circle {
+      width: 17rem !important;
+      height: 17rem !important;
+      padding: 4rem;
+
+      p {
+        color: $white;
+        font-size: 0.7rem;
+      }
+
+      .sur1 {
+        top: -1rem;
+
+        p {
+          font-size: 0.7rem;
+          padding: 1rem;
+        }
+      }
+
+      .sur2 {
+        top: 5rem;
+        left: -2rem;
+        border-radius: 0.7rem;
+        margin-top: 1rem;
+
+        p {
+          font-size: 0.7rem;
+          padding: 1rem;
+        }
+      }
+
+      .sur3 {
+        top: 5rem;
+        right: -2rem;
+        margin-top: 1rem;
+
+        p {
+          font-size: 0.7rem;
+          padding: 1rem;
+        }
+      }
+
+      .sur4 {
+        top: 2rem;
+        right: 0.8rem;
+        height: 2rem;
+        width: 2rem;
+      }
+
+      .sur5 {
+        top: 2rem;
+        left: 0.8rem;
+        height: 2rem;
+        width: 2rem;
+      }
+
+      .sur6 {
+        bottom: -0.7rem;
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .circleContainer {
+    // scale: .6;
+
+    .circle {
+      width: 37rem;
+      height: 30rem;
+      padding: 4rem;
+    }
+  }
+}
+
+@media (max-width: 344px) {
+  .circleContainer {
+    .circle {
+      width: 14rem !important;
+      height: 14rem !important;
+      padding: 4rem;
+
+      p {
+        color: $white;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .team {
+    width: 50%;
+    overflow: hidden;
+    background: #1a1b23;
+    box-shadow: -23px 21px 22px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    padding: 2rem;
+
+    .discription {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+
+      .text {
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

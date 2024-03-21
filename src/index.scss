@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './assets/scss/main.scss';
+
+
+.white-input {
+    background-color: rgb(77, 75, 75);
+    color: rgb(250, 245, 245);
+}

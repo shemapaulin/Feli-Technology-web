@@ -1,0 +1,150 @@
+@import '../../assets/scss/variable';
+@import '../../assets/scss/mixins';
+
+.home_page {
+  margin: 100%;
+  height: 100%;
+}
+
+.section_intro {
+  margin-left: 20%;
+  padding: 0 5%;
+}
+
+.section__holder {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+
+  &:first-child {
+    margin-top: 2rem;
+  }
+}
+
+.text_mod {
+  text-shadow: 1px 0 4px rgb(88, 88, 88);
+}
+
+.text {
+  margin-left: 20%;
+  padding: 0 5%;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.1875rem;
+    line-height: 1.75rem;
+  }
+
+  h5 {
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 32px;
+    margin-bottom: 1rem;
+    color: $white;
+  }
+}
+
+.achievements_page {
+  padding-top: 0;
+}
+
+.background_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  // width: 100%;
+  height: auto;
+  max-height: 100vh;
+
+  img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+    object-fit: contain;
+  }
+}
+
+.flexImage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5rem 0;
+  padding: 0 10%;
+
+  .alignCenter {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    h2 {
+      font-size: 3rem;
+      color: $white;
+    }
+  }
+
+  & > div {
+    width: 48%;
+    height: 100%;
+    margin-top: 5rem;
+
+    img {
+      display: inline-block;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    h3 {
+      margin-top: 1rem;
+      font-size: 18px;
+      color: $white;
+      font-weight: bold;
+    }
+  }
+
+  .mainImage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+    img {
+      width: 50%;
+    }
+
+    .flexp {
+      width: 55%;
+      padding: 0 3%;
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .flexImage {
+    padding: 0 5%;
+
+    & > div {
+      width: 100%;
+      margin-top: 5rem;
+    }
+
+    .mainImage {
+      img {
+        width: 100%;
+      }
+
+      .flexp {
+        width: 105%;
+      }
+    }
+  }
+}

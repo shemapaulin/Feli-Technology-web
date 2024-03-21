@@ -1,0 +1,122 @@
+@import '../../assets/scss/main.scss';
+
+.no-scroll {
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  max-width: 100%;
+  height: 90px;
+}
+
+.header-container {
+  max-width: 100%;
+  padding: 0 24px;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 7;
+  height: 90px;
+  // background-color: $primary-color;
+
+  @include d-flex(space-between, center);
+}
+
+.my_logo {
+  width: 90px;
+  position: fixed;
+  top: 1rem;
+  left: 5%;
+  z-index: 11;
+  opacity: 1;
+  transition: all 2s ease-in-out 0.1s;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &.no-shown {
+    width: 350px;
+    opacity: 0.05;
+    top: 7rem;
+    left: 40%;
+    position: fixed;
+  }
+}
+
+@include media(480px) {
+  header {
+    height: calc(90px + 10px);
+  }
+
+  .header-container {
+    height: calc(90px + 10px);
+    max-height: calc(524px + 148px + 10px);
+    padding: 0 7%;
+  }
+
+  .my_logo {
+    width: 110px;
+
+    &.no-shown {
+      width: 400px;
+      top: 8rem;
+    }
+  }
+}
+
+@include media(786px) {
+  .my_logo {
+    width: 120px;
+
+    &.no-shown {
+      width: 450px;
+      top: 5rem;
+      left: 45%;
+    }
+  }
+}
+
+@include media(992px) {
+  // .my_logo,
+  .my_logo.no-shown {
+    top: 18rem;
+    left: 60%;
+  }
+}
+
+@include media(1200px) {
+  header.header {
+    height: 120px;
+  }
+
+  .header-container {
+    height: 120px;
+  }
+
+  // .my_logo,
+  .my_logo.no-shown {
+    top: 20rem;
+  }
+}
+
+@include media(1480px) {
+  .header-container {
+    padding: 0 8%;
+
+    .my_logo {
+      width: 110px;
+      left: 7%;
+
+      &.no-shown {
+        width: 400px;
+        left: 60%;
+      }
+    }
+  }
+}
